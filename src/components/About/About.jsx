@@ -16,12 +16,12 @@ export const About = () => {
         const fetchTracks = async () => {
             
 
-            //const baseUrl = '/api/soundcloud';
-            const baseUrl = 'https://api-v2.soundcloud.com';
+            const baseUrl = '/api/soundcloud';
+            //const baseUrl = 'https://api-v2.soundcloud.com';
 
 
-            //const response = await fetch(`${baseUrl}?path=users/${user_id}/tracks&limit=5`);
-            const response = await fetch(`${baseUrl}/users/${user_id}/tracks?client_id=${client_id}&limit=5`);
+            const response = await fetch(`${baseUrl}?path=users/${user_id}/tracks&limit=5`);
+            // const response = await fetch(`${baseUrl}/users/${user_id}/tracks?client_id=${client_id}&limit=5`);
 
             const data = await response.json();
             console.log(data); // Log the response
@@ -36,8 +36,8 @@ export const About = () => {
         const baseUrl = '/api/soundcloud';
         const newUrl = transcodingUrl.replace('https://api-v2.soundcloud.com/', '');
 
-        //const audioResponse = await fetch(`${baseUrl}?path=${newUrl}`);
-        const audioResponse = await fetch(`${transcodingUrl}?client_id=${client_id}`);
+        const audioResponse = await fetch(`${baseUrl}?path=${newUrl}`);
+        // const audioResponse = await fetch(`${transcodingUrl}?client_id=${client_id}`);
 
         const audioData = await audioResponse.json();
         console.log(audioData.url); // Log the audio URL
@@ -97,7 +97,7 @@ export const About = () => {
                 </div>
             </div>
 
-            {/* Display SoundCloud Tracks
+            {/*Display SoundCloud Tracks*/}
             <div className={styles.aboutBox}>
                 <h3 className={styles.aboutTitle}>My Tracks</h3>
                 <div className={styles.tracksContainer}>
@@ -129,7 +129,7 @@ export const About = () => {
                         <p>Loading tracks...</p>
                     )}
                 </div>
-            </div> */}
+            </div>
         </section>
     );
 };
