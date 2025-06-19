@@ -1,5 +1,4 @@
 {
-  "homepage": "https://theodorefink.github.io/portfolio",
   "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
@@ -8,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview", "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@fontsource/outfit": "^5.2.5",
