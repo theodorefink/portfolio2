@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from './About.module.css';
 
-const client_id = 'AXHkknI02RnaQ0vVJ3FK3pVcoToTlmFK';
+// const client_id = 'AXHkknI02RnaQ0vVJ3FK3pVcoToTlmFK';
+const client_id = 'T26Olo5VaFwfbJtWjYtvIFx3vOe4v84D';
 const user_id = '505619184'; // Your user ID
 
 export const About = () => {

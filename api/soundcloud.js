@@ -1,5 +1,5 @@
  export default async function handler(req, res) {
-    const client_id = 'AXHkknI02RnaQ0vVJ3FK3pVcoToTlmFK';
+    const client_id = 'T26Olo5VaFwfbJtWjYtvIFx3vOe4v84D';
     const { path } = req.query;
   
     const fullUrl = `https://api-v2.soundcloud.com/${path}?client_id=${client_id}`;
