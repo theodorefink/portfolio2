@@ -3,6 +3,7 @@ import styles from './Projects.module.css';
 import spellingBeePic from '../../assets/spellingbee.png';
 import nzBirdsPic from '../../assets/nzbirds.png';
 import andiePic from '../../assets/andie.png';
+import fridgeClassifierPic from '../../assets/fridge_classifier.png';
 
 export const Projects = () => {
     return (
@@ -47,6 +48,20 @@ export const Projects = () => {
                     </a>
                     <p className={styles.projectDesc}>This is ANDIE - A Non-Destructive Image Editor, built using Java and its Swing and AWT libraries. This was a group project, where we collectively implemented over 40 features.</p>
                 </div>
+            </div>
+            <div className={styles.projectBox}>
+                <h3 className={styles.projectTitle}>Fridge Classifier AI</h3>
+                <div className={styles.projectBox2}>
+                    <p className={styles.projectDesc}>This is an AI fridge-fullness classifier that I trained using PyTorch and ResNet18 as a proof of concept for my team's idea for the NZ AI Hackathon. It was trained on a dataset of 100 images of fridges of varying fullness which I labelled, and classifies them as either full, half full, or empty with ~75% accuracy.</p>
+                    <a href="https://github.com/Lachyzzz1/KaiConnect/tree/main" target="_blank" rel="noopener noreferrer">
+                        <img 
+                            src={fridgeClassifierPic}
+                            alt="Photo of fridge classifier project" 
+                            className={styles.projectImage} 
+                        />
+                    </a>
+                </div>
+                
             </div>
         </section>
     )
