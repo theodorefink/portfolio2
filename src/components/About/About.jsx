@@ -134,7 +134,7 @@ import styles from './About.module.css';
 import otagoPic from '../../assets/otagouni.png';
 import musicStudioPic from '../../assets/musicstu.png';
 
-const client_id = 'ryRUzIe9hOPkIaQ8QRP97XcuYzdhStHs';
+const client_id = '8VAIbDYccOVbB1QV2LSOSafd1i33hgkT';
 const user_id = '505619184';
 // const client_id = 'T26Olo5VaFwfbJtWjYtvIFx3vOe4v84D';
 // const user_id = '505619184'; 
