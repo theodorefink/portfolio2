@@ -15,25 +15,19 @@ export const About = () => {
 
     useEffect(() => {
         const fetchTracks = async () => {
+            try{
+                const baseUrl = '/api/soundcloud';
+                const response = await fetch(`${baseUrl}?path=users/${user_id}/tracks&limit=5`);
+                const data = await response.json();
+                console.log(data); 
+                setTracks(data.collection); 
+            } catch {
+                console.error("Error fetching tracks");
+            }
             
-
-            const baseUrl = '/api/soundcloud';
-            //const baseUrl = 'https://api-v2.soundcloud.com';
-
-
-            const response = await fetch(`${baseUrl}?path=users/${user_id}/tracks&limit=5`);
-            // const response = await fetch(`${baseUrl}/users/${user_id}/tracks?client_id=${client_id}&limit=5`);
-
-            const data = await response.json();
-            console.log(data); 
-            setTracks(data.collection); 
         };
-
-        try{
             fetchTracks()
-        }catch{
             console.error("error fetching tracks");
-        };
     }, []);
 
     // Function to fetch audio URL from transcoding URL
