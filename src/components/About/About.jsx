@@ -17,7 +17,7 @@ export const About = () => {
         const fetchTracks = async () => {
             try{
                 const baseUrl = '/api/soundcloud';
-                const response = await fetch(`${baseUrl}?path=users/${user_id}/tracks&limit=5`);
+                const response = await fetch(`${baseUrl}?path=users/${user_id}/toptracks&limit=5`);
                 const data = await response.json();
                 console.log(data); 
                 setTracks(data.collection); 
