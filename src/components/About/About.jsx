@@ -1,104 +1,127 @@
 // import React, { useEffect, useState } from "react";
-import styles from './About.module.css';
-import otagoPic from '../../assets/otagouni.png';
-import musicStudioPic from '../../assets/musicstu.png';
+import styles from "./About.module.css";
+import otagoPic from "../../assets/otagouni.png";
+import musicStudioPic from "../../assets/musicstu.png";
 
 // const client_id = 'knW1rrkzZq7EKRs3wY0k0hqDxv1AqnTs';
 // const user_id = '505619184';
 // const client_id = '8VAIbDYccOVbB1QV2LSOSafd1i33hgkT';
 // const user_id = '505619184';
 // const client_id = 'T26Olo5VaFwfbJtWjYtvIFx3vOe4v84D';
-// const user_id = '505619184'; 
+// const user_id = '505619184';
 
 export const About = () => {
-    // const [tracks, setTracks] = useState([]);
+  // const [tracks, setTracks] = useState([]);
 
-    // useEffect(() => {
-    //     const fetchTracks = async () => {
-    //         try{
-    //             const baseUrl = '/api/soundcloud';
-    //             const response = await fetch(`${baseUrl}?path=users/${user_id}/toptracks&limit=5`);
-    //             const data = await response.json();
-    //             console.log(data); 
-    //             setTracks(data.collection); 
-    //         } catch {
-    //             console.error("Error fetching tracks");
-    //         }
-            
-    //     };
-    //         fetchTracks()
-    // }, []);
+  // useEffect(() => {
+  //     const fetchTracks = async () => {
+  //         try{
+  //             const baseUrl = '/api/soundcloud';
+  //             const response = await fetch(`${baseUrl}?path=users/${user_id}/toptracks&limit=5`);
+  //             const data = await response.json();
+  //             console.log(data);
+  //             setTracks(data.collection);
+  //         } catch {
+  //             console.error("Error fetching tracks");
+  //         }
 
-    // // Function to fetch audio URL from transcoding URL
-    // const fetchAudioUrl = async (transcodingUrl) => {
-    //     const baseUrl = '/api/soundcloud';
-    //     const newUrl = transcodingUrl.replace('https://api-v2.soundcloud.com/', '');
+  //     };
+  //         fetchTracks()
+  // }, []);
 
-    //     const audioResponse = await fetch(`${baseUrl}?path=${newUrl}`);
-    //     // const audioResponse = await fetch(`${transcodingUrl}?client_id=${client_id}`);
+  // // Function to fetch audio URL from transcoding URL
+  // const fetchAudioUrl = async (transcodingUrl) => {
+  //     const baseUrl = '/api/soundcloud';
+  //     const newUrl = transcodingUrl.replace('https://api-v2.soundcloud.com/', '');
 
-    //     const audioData = await audioResponse.json();
-    //     console.log(audioData.url); 
-    //     return audioData.url;
-        
-    // };
+  //     const audioResponse = await fetch(`${baseUrl}?path=${newUrl}`);
+  //     // const audioResponse = await fetch(`${transcodingUrl}?client_id=${client_id}`);
 
-    // const [audioUrls, setAudioUrls] = useState({});
+  //     const audioData = await audioResponse.json();
+  //     console.log(audioData.url);
+  //     return audioData.url;
 
-    // // Fetch the audio URL for each track and store it
-    // useEffect(() => {
-    //     const fetchAllAudioUrls = async () => {
-    //         let audioUrlData = {};
-    //         for (let track of tracks) {
-    //             if (track.media && track.media.transcodings && track.media.transcodings.length > 0) {
-    //                 const transcodingUrl = track.media.transcodings.find(t => t.format.protocol === 'progressive')?.url;
-    //                 if (transcodingUrl) {
-    //                     const audioUrl = await fetchAudioUrl(transcodingUrl);
-    //                     audioUrlData[track.id] = audioUrl;
-    //                 }
-    //             }
-    //         }
-    //         setAudioUrls(audioUrlData);
-    //     };
+  // };
 
-    //     if (tracks.length > 0) {
-    //         fetchAllAudioUrls();
-    //     }
-    // }, [tracks]);
+  // const [audioUrls, setAudioUrls] = useState({});
 
-    return (
-        <section className={styles.aboutSection}>
-            <h2>About Me</h2>
-            <div className={styles.aboutBox}>
-                <h3 className={styles.aboutTitle}>Education</h3>
-                <div className={styles.aboutBox2}>
-                    <a href="https://www.otago.ac.nz" target="_blank" rel="noopener noreferrer">
-                        <img 
-                            src={otagoPic} 
-                            alt="Otago University logo" 
-                            className={styles.aboutImage} 
-                        />
-                    </a>
-                    <p className={styles.aboutDesc}>I am in my third year of my Bachelor of Science at the University of Otago, majoring in Computer Science and minoring in Mathematics. I have achieved highly in disciplines such as Web Development, Software Development, Data Structures and Algorithms, Databases, and Operating Systems Programming, and I am yet to complete papers in Artificial Intelligence. I currently hold a GPA of 7.7 out of 9, which reflects my ability to work hard and hold myself to high standards. I am also proficient in Linear Algebra and Differential Equations - I thoroughly enjoy the problem solving side of Computer Science and Mathematics.</p>
-                </div>
-            </div>
-            <div className={styles.aboutBox}>
-                <h3 className={styles.aboutTitle}>Hobbies</h3>
-                <div className={styles.aboutBox2}>
-                    <img 
-                        src={musicStudioPic} 
-                        alt="music studio photo" 
-                        className={styles.aboutImage2} 
-                    />
-                    <p className={styles.aboutDesc}>Outside of coding, I enjoy making electronic music using Ableton, a Digital Audio Workstation on my computer. I have been teaching myself over the past two years and have uploaded some of my finished tracks on my soundcloud, which you can check out below. The world of software instruments and plugins is already super vast, it fascinates me how many sounds and effects can be achieved through software, and I would love to one day be able to code my own! </p>
-                </div>
-            </div>
+  // // Fetch the audio URL for each track and store it
+  // useEffect(() => {
+  //     const fetchAllAudioUrls = async () => {
+  //         let audioUrlData = {};
+  //         for (let track of tracks) {
+  //             if (track.media && track.media.transcodings && track.media.transcodings.length > 0) {
+  //                 const transcodingUrl = track.media.transcodings.find(t => t.format.protocol === 'progressive')?.url;
+  //                 if (transcodingUrl) {
+  //                     const audioUrl = await fetchAudioUrl(transcodingUrl);
+  //                     audioUrlData[track.id] = audioUrl;
+  //                 }
+  //             }
+  //         }
+  //         setAudioUrls(audioUrlData);
+  //     };
 
-            {/*Display SoundCloud Tracks*/}
-            <div className={styles.aboutBox}>
-                <h3 className={styles.aboutTitle}>My Tracks</h3>
-                <div className={styles.tracksContainer}>
-                    {/* {tracks.length > 0 ? (
+  //     if (tracks.length > 0) {
+  //         fetchAllAudioUrls();
+  //     }
+  // }, [tracks]);
+
+  return (
+    <section className={styles.aboutSection}>
+      <h2>About Me</h2>
+      <div className={styles.aboutBox}>
+        <h3 className={styles.aboutTitle}>Education</h3>
+        <div className={styles.aboutBox2}>
+          <a
+            href="https://www.otago.ac.nz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={otagoPic}
+              alt="Otago University logo"
+              className={styles.aboutImage}
+            />
+          </a>
+          <p className={styles.aboutDesc}>
+            I am in my third year of my Bachelor of Science at the University of
+            Otago, majoring in Computer Science and minoring in Mathematics. I
+            have achieved highly in disciplines such as Web Development,
+            Software Development, Data Structures and Algorithms, Databases, and
+            Operating Systems Programming, and I am yet to complete papers in
+            Artificial Intelligence. I currently hold a GPA of 7.7 out of 9,
+            which reflects my ability to work hard and hold myself to high
+            standards. I am also proficient in Linear Algebra and Differential
+            Equations - I thoroughly enjoy the problem solving side of Computer
+            Science and Mathematics.
+          </p>
+        </div>
+      </div>
+      <div className={styles.aboutBox}>
+        <h3 className={styles.aboutTitle}>Hobbies</h3>
+        <div className={styles.aboutBox2}>
+          <img
+            src={musicStudioPic}
+            alt="music studio photo"
+            className={styles.aboutImage2}
+          />
+          <p className={styles.aboutDesc}>
+            Outside of coding, I enjoy making electronic music using Ableton, a
+            Digital Audio Workstation on my computer. I have been teaching
+            myself over the past two years and have uploaded some of my finished
+            tracks on my soundcloud, which you can check out below. The world of
+            software instruments and plugins is already super vast, it
+            fascinates me how many sounds and effects can be achieved through
+            software, and I would love to one day be able to code my own!{" "}
+          </p>
+        </div>
+      </div>
+
+      {/*Display SoundCloud Tracks*/}
+      <div className={styles.aboutBox}>
+        <h3 className={styles.aboutTitle}>My Tracks</h3>
+        <div className={styles.tracksContainer}>
+          {/* {tracks.length > 0 ? (
                         tracks.map((track, index) => (
                             <div key={index} className={styles.trackItem}>
                                 <img 
@@ -125,12 +148,49 @@ export const About = () => {
                     ) : (
                         <p>Loading tracks...</p>
                     )} */}
-                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2138841666&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                        <a href="https://soundcloud.com/theodore-nz" title="theodore (nz)" target="_blank" style="color: #cccccc; text-decoration: none;">theodore (nz)</a> · <a href="https://soundcloud.com/theodore-nz/sister-sledge-lost-in-music-theodore-edit" title="Sister Sledge - Lost In Music (theodore edit) [TEDITS001]" target="_blank" style="color: #cccccc; text-decoration: none;">Sister Sledge - Lost In Music (theodore edit) [TEDITS001]</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+          <iframe
+            width="100%"
+            height="300"
+            scrolling="no"
+            frameBorder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2138841666&color=%23ff5500&auto_play=false&visual=true"
+          />
+
+          <div
+            style={{
+              fontSize: "10px",
+              color: "#cccccc",
+              lineBreak: "anywhere",
+              wordBreak: "normal",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              textOverflow: "ellipsis",
+              fontFamily:
+                "Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif",
+              fontWeight: 100,
+            }}
+          >
+            <a
+              href="https://soundcloud.com/theodore-nz"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#cccccc", textDecoration: "none" }}
+            >
+              theodore (nz)
+            </a>
+            {" · "}
+            <a
+              href="https://soundcloud.com/theodore-nz/sister-sledge-lost-in-music-theodore-edit"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#cccccc", textDecoration: "none" }}
+            >
+              Sister Sledge - Lost In Music (theodore edit)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
