@@ -22,12 +22,11 @@ export const About = () => {
             />
           </a>
           <p className={styles.aboutDesc}>
-            I am in my third year of my Bachelor of Science at the University of
+            I have graduated from a Bachelor of Science at the University of
             Otago, majoring in Computer Science and minoring in Mathematics. I
             have achieved highly in disciplines such as Web Development,
-            Software Development, Data Structures and Algorithms, Databases, and
-            Operating Systems Programming, and I am yet to complete papers in
-            Artificial Intelligence. I currently hold a GPA of 7.7 out of 9,
+            Software Engineering, Data Structures and Algorithms, Databases, and
+            Artificial Intelligence. I graduated with a GPA of 7.7 out of 9,
             which reflects my ability to work hard and hold myself to high
             standards. I am also proficient in Linear Algebra and Differential
             Equations - I thoroughly enjoy the problem solving side of Computer
