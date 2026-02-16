@@ -1,70 +1,70 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import styles from './About.module.css';
 import otagoPic from '../../assets/otagouni.png';
 import musicStudioPic from '../../assets/musicstu.png';
 
 // const client_id = 'knW1rrkzZq7EKRs3wY0k0hqDxv1AqnTs';
-const user_id = '505619184';
+// const user_id = '505619184';
 // const client_id = '8VAIbDYccOVbB1QV2LSOSafd1i33hgkT';
 // const user_id = '505619184';
 // const client_id = 'T26Olo5VaFwfbJtWjYtvIFx3vOe4v84D';
 // const user_id = '505619184'; 
 
 export const About = () => {
-    const [tracks, setTracks] = useState([]);
+    // const [tracks, setTracks] = useState([]);
 
-    useEffect(() => {
-        const fetchTracks = async () => {
-            try{
-                const baseUrl = '/api/soundcloud';
-                const response = await fetch(`${baseUrl}?path=users/${user_id}/toptracks&limit=5`);
-                const data = await response.json();
-                console.log(data); 
-                setTracks(data.collection); 
-            } catch {
-                console.error("Error fetching tracks");
-            }
+    // useEffect(() => {
+    //     const fetchTracks = async () => {
+    //         try{
+    //             const baseUrl = '/api/soundcloud';
+    //             const response = await fetch(`${baseUrl}?path=users/${user_id}/toptracks&limit=5`);
+    //             const data = await response.json();
+    //             console.log(data); 
+    //             setTracks(data.collection); 
+    //         } catch {
+    //             console.error("Error fetching tracks");
+    //         }
             
-        };
-            fetchTracks()
-    }, []);
+    //     };
+    //         fetchTracks()
+    // }, []);
 
-    // Function to fetch audio URL from transcoding URL
-    const fetchAudioUrl = async (transcodingUrl) => {
-        const baseUrl = '/api/soundcloud';
-        const newUrl = transcodingUrl.replace('https://api-v2.soundcloud.com/', '');
+    // // Function to fetch audio URL from transcoding URL
+    // const fetchAudioUrl = async (transcodingUrl) => {
+    //     const baseUrl = '/api/soundcloud';
+    //     const newUrl = transcodingUrl.replace('https://api-v2.soundcloud.com/', '');
 
-        const audioResponse = await fetch(`${baseUrl}?path=${newUrl}`);
-        // const audioResponse = await fetch(`${transcodingUrl}?client_id=${client_id}`);
+    //     const audioResponse = await fetch(`${baseUrl}?path=${newUrl}`);
+    //     // const audioResponse = await fetch(`${transcodingUrl}?client_id=${client_id}`);
 
-        const audioData = await audioResponse.json();
-        console.log(audioData.url); 
-        return audioData.url;
+    //     const audioData = await audioResponse.json();
+    //     console.log(audioData.url); 
+    //     return audioData.url;
         
-    };
+    // };
 
-    const [audioUrls, setAudioUrls] = useState({});
+    // const [audioUrls, setAudioUrls] = useState({});
 
-    // Fetch the audio URL for each track and store it
-    useEffect(() => {
-        const fetchAllAudioUrls = async () => {
-            let audioUrlData = {};
-            for (let track of tracks) {
-                if (track.media && track.media.transcodings && track.media.transcodings.length > 0) {
-                    const transcodingUrl = track.media.transcodings.find(t => t.format.protocol === 'progressive')?.url;
-                    if (transcodingUrl) {
-                        const audioUrl = await fetchAudioUrl(transcodingUrl);
-                        audioUrlData[track.id] = audioUrl;
-                    }
-                }
-            }
-            setAudioUrls(audioUrlData);
-        };
+    // // Fetch the audio URL for each track and store it
+    // useEffect(() => {
+    //     const fetchAllAudioUrls = async () => {
+    //         let audioUrlData = {};
+    //         for (let track of tracks) {
+    //             if (track.media && track.media.transcodings && track.media.transcodings.length > 0) {
+    //                 const transcodingUrl = track.media.transcodings.find(t => t.format.protocol === 'progressive')?.url;
+    //                 if (transcodingUrl) {
+    //                     const audioUrl = await fetchAudioUrl(transcodingUrl);
+    //                     audioUrlData[track.id] = audioUrl;
+    //                 }
+    //             }
+    //         }
+    //         setAudioUrls(audioUrlData);
+    //     };
 
-        if (tracks.length > 0) {
-            fetchAllAudioUrls();
-        }
-    }, [tracks]);
+    //     if (tracks.length > 0) {
+    //         fetchAllAudioUrls();
+    //     }
+    // }, [tracks]);
 
     return (
         <section className={styles.aboutSection}>
@@ -98,7 +98,7 @@ export const About = () => {
             <div className={styles.aboutBox}>
                 <h3 className={styles.aboutTitle}>My Tracks</h3>
                 <div className={styles.tracksContainer}>
-                    {tracks.length > 0 ? (
+                    {/* {tracks.length > 0 ? (
                         tracks.map((track, index) => (
                             <div key={index} className={styles.trackItem}>
                                 <img 
@@ -124,7 +124,11 @@ export const About = () => {
                         ))
                     ) : (
                         <p>Loading tracks...</p>
-                    )}
+                    )} */}
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2138841666&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                        <a href="https://soundcloud.com/theodore-nz" title="theodore (nz)" target="_blank" style="color: #cccccc; text-decoration: none;">theodore (nz)</a> · <a href="https://soundcloud.com/theodore-nz/sister-sledge-lost-in-music-theodore-edit" title="Sister Sledge - Lost In Music (theodore edit) [TEDITS001]" target="_blank" style="color: #cccccc; text-decoration: none;">Sister Sledge - Lost In Music (theodore edit) [TEDITS001]</a>
+                    </div>
                 </div>
             </div>
         </section>
