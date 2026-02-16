@@ -1,71 +1,9 @@
-// import React, { useEffect, useState } from "react";
 import styles from "./About.module.css";
 import otagoPic from "../../assets/otagouni.png";
 import musicStudioPic from "../../assets/musicstu.png";
-
-// const client_id = 'knW1rrkzZq7EKRs3wY0k0hqDxv1AqnTs';
-// const user_id = '505619184';
-// const client_id = '8VAIbDYccOVbB1QV2LSOSafd1i33hgkT';
-// const user_id = '505619184';
-// const client_id = 'T26Olo5VaFwfbJtWjYtvIFx3vOe4v84D';
-// const user_id = '505619184';
+import ADIPic from "../../assets/adinstruments_logo.jpeg";
 
 export const About = () => {
-  // const [tracks, setTracks] = useState([]);
-
-  // useEffect(() => {
-  //     const fetchTracks = async () => {
-  //         try{
-  //             const baseUrl = '/api/soundcloud';
-  //             const response = await fetch(`${baseUrl}?path=users/${user_id}/toptracks&limit=5`);
-  //             const data = await response.json();
-  //             console.log(data);
-  //             setTracks(data.collection);
-  //         } catch {
-  //             console.error("Error fetching tracks");
-  //         }
-
-  //     };
-  //         fetchTracks()
-  // }, []);
-
-  // // Function to fetch audio URL from transcoding URL
-  // const fetchAudioUrl = async (transcodingUrl) => {
-  //     const baseUrl = '/api/soundcloud';
-  //     const newUrl = transcodingUrl.replace('https://api-v2.soundcloud.com/', '');
-
-  //     const audioResponse = await fetch(`${baseUrl}?path=${newUrl}`);
-  //     // const audioResponse = await fetch(`${transcodingUrl}?client_id=${client_id}`);
-
-  //     const audioData = await audioResponse.json();
-  //     console.log(audioData.url);
-  //     return audioData.url;
-
-  // };
-
-  // const [audioUrls, setAudioUrls] = useState({});
-
-  // // Fetch the audio URL for each track and store it
-  // useEffect(() => {
-  //     const fetchAllAudioUrls = async () => {
-  //         let audioUrlData = {};
-  //         for (let track of tracks) {
-  //             if (track.media && track.media.transcodings && track.media.transcodings.length > 0) {
-  //                 const transcodingUrl = track.media.transcodings.find(t => t.format.protocol === 'progressive')?.url;
-  //                 if (transcodingUrl) {
-  //                     const audioUrl = await fetchAudioUrl(transcodingUrl);
-  //                     audioUrlData[track.id] = audioUrl;
-  //                 }
-  //             }
-  //         }
-  //         setAudioUrls(audioUrlData);
-  //     };
-
-  //     if (tracks.length > 0) {
-  //         fetchAllAudioUrls();
-  //     }
-  // }, [tracks]);
-
   return (
     <section className={styles.aboutSection}>
       <h2>About Me</h2>
@@ -98,6 +36,34 @@ export const About = () => {
         </div>
       </div>
       <div className={styles.aboutBox}>
+        <h3 className={styles.aboutTitle}>Experience</h3>
+        <div className={styles.aboutBox2}>
+          <a
+            href="https://www.adinstruments.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={ADIPic}
+              alt="ADInstruments logo"
+              className={styles.aboutImage}
+            />
+          </a>
+          <p className={styles.aboutDesc}>
+            I have gained real world experience through an internship with
+            ADInstruments, where I worked as part of an agile team of 10 people
+            to maintain 'Lt' - their cloud based education web app used by
+            university students worldwide. Here I developed and shipped 12
+            releases ranging from bug fixes to major feature improvements such
+            as making core functions iPad accessible. I refined my coding skills
+            in React/Typescript and learned to work within a large codebase,
+            reading and writing reusable and maintainable code. This experience
+            gave me insight into what being a software engineer really means in
+            the industry and what is important for SaaS businesses to thrive.
+          </p>
+        </div>
+      </div>
+      <div className={styles.aboutBox}>
         <h3 className={styles.aboutTitle}>Hobbies</h3>
         <div className={styles.aboutBox2}>
           <img
@@ -112,7 +78,7 @@ export const About = () => {
             tracks on my soundcloud, which you can check out below. The world of
             software instruments and plugins is already super vast, it
             fascinates me how many sounds and effects can be achieved through
-            software, and I would love to one day be able to code my own!{" "}
+            software, and I am currently teaching myself to code my own!
           </p>
         </div>
       </div>
@@ -121,73 +87,48 @@ export const About = () => {
       <div className={styles.aboutBox}>
         <h3 className={styles.aboutTitle}>My Tracks</h3>
         <div className={styles.tracksContainer}>
-          {/* {tracks.length > 0 ? (
-                        tracks.map((track, index) => (
-                            <div key={index} className={styles.trackItem}>
-                                <img 
-                                    src={track.artwork_url} 
-                                    alt="cover art" 
-                                    className={styles.trackImage} 
-                                />
-                                <div className = {styles.track}>
-                                    <h4>{track.title}</h4>
-                                    <audio controls>
-                                        {audioUrls[track.id] ? (
-                                            <source 
-                                               src={audioUrls[track.id]} 
-                                               type="audio/mpeg" 
-                                            />
-                                        ) : (
-                                            <p>Loading audio...</p>
-                                        )}
-                                        Your browser does not support the audio element.
-                                    </audio>
-                                </div>
-                            </div>
-                        ))
-                    ) : (
-                        <p>Loading tracks...</p>
-                    )} */}
-          <iframe
-            width="100%"
-            height="300"
-            scrolling="no"
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2138841666&color=%23ff5500&auto_play=false&visual=true"
-          />
+          <div className={styles.trackItem}>
+            <iframe
+              width="100%"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2138841666&color=%23ff5500&auto_play=false&visual=true"
+            />
 
-          <div
-            style={{
-              fontSize: "10px",
-              color: "#cccccc",
-              lineBreak: "anywhere",
-              wordBreak: "normal",
-              overflow: "hidden",
-              whiteSpace: "nowrap",
-              textOverflow: "ellipsis",
-              fontFamily:
-                "Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif",
-              fontWeight: 100,
-            }}
-          >
-            <a
-              href="https://soundcloud.com/theodore-nz"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#cccccc", textDecoration: "none" }}
-            >
-              theodore (nz)
-            </a>
-            {" · "}
-            <a
-              href="https://soundcloud.com/theodore-nz/sister-sledge-lost-in-music-theodore-edit"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#cccccc", textDecoration: "none" }}
-            >
-              Sister Sledge - Lost In Music (theodore edit)
-            </a>
+            <div
+              style={{
+                fontSize: "10px",
+                color: "#cccccc",
+                lineBreak: "anywhere",
+                wordBreak: "normal",
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                textOverflow: "ellipsis",
+                fontFamily:
+                  "Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif",
+                fontWeight: 100,
+              }}
+            ></div>
+          </div>
+          <div className={styles.trackItem}>
+            <iframe
+              width="100%"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2107910508&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            />
+            <div
+              style={{
+                fontSize: "10px",
+                color: "#cccccc",
+                lineBreak: "anywhere",
+                wordBreak: "normal",
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                textOverflow: "ellipsis",
+                fontFamily:
+                  "Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif",
+                fontWeight: 100,
+              }}
+            ></div>
           </div>
         </div>
       </div>

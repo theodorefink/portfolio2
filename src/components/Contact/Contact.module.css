@@ -82,7 +82,7 @@ h2 {
 
 /* == SMALL SCREEN HANDLING ==*/
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .contactSection {
     margin-left: 5vw;
     margin-right: 5vw;

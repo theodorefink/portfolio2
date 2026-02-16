@@ -61,7 +61,7 @@ h2:hover {
 
 /* === MOBILE RESPONSIVE ADJUSTMENTS === */
   
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .projectsSection {
       margin: 3vh 5vw 0 5vw;
       padding: 10px 5vw;

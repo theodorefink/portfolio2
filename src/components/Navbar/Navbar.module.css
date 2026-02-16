@@ -54,7 +54,7 @@ nav {
     transform: translateY(-100%); /* Move the navbar out of view */
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     nav {
       padding: 10px 5vw;
       margin-left: 5vw;
