@@ -27,7 +27,6 @@ export const About = () => {
             
         };
             fetchTracks()
-            console.error("error fetching tracks");
     }, []);
 
     // Function to fetch audio URL from transcoding URL
