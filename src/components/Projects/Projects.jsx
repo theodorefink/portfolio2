@@ -1,68 +1,130 @@
 import React from "react";
-import styles from './Projects.module.css';
-import spellingBeePic from '../../assets/spellingbee.png';
-import nzBirdsPic from '../../assets/nzbirds.png';
-import andiePic from '../../assets/andie.png';
-import fridgeClassifierPic from '../../assets/fridge-classifier.png';
+import styles from "./Projects.module.css";
+import spellingBeePic from "../../assets/spellingbee.png";
+import nzBirdsPic from "../../assets/nzbirds.png";
+import andiePic from "../../assets/andie.png";
+import fridgeClassifierPic from "../../assets/fridge-classifier.png";
+import shortlistPic from "../../assets/shortlist-pic.png";
 
 export const Projects = () => {
-    return (
-        <section className={styles.projectsSection}>
-            <h2>My Projects</h2>
-            <div className={styles.projectBox}>
-                <h3 className={styles.projectTitle}>Spelling Bee Solver</h3>
-                <div className={styles.projectBox2}>
-                    <a href="https://pangram-solver.vercel.app" target="_blank" rel="noopener noreferrer">
-                        <img 
-                            src={spellingBeePic}
-                            alt="Photo of spelling bee project" 
-                            className={styles.projectImage} 
-                        />
-                    </a>
-                    <p className={styles.projectDesc}>This is my Spelling Bee solver web app that I made as a personal project. I love doing the New York Times spelling bee, but sometimes I get a bit stumped so I made this solver app!</p>
-                </div>
-            </div>
-            <div className={styles.projectBox}>
-                <h3 className={styles.projectTitle}>New Zealand Birds website</h3>
-                <div className={styles.projectBox2}>
-                    <p className={styles.projectDesc}>This is a website that I made to learn web design. It displays information about New Zealand birds and offers the ability to filter and search.</p>
-                    <a href="https://nzbirds.vercel.app" target="_blank" rel="noopener noreferrer">
-                        <img 
-                            src={nzBirdsPic}
-                            alt="Photo of NZ birds project" 
-                            className={styles.projectImage} 
-                        />
-                    </a>
-                </div>
-                
-            </div>
-            <div className={styles.projectBox}>
-                <h3 className={styles.projectTitle}>ANDIE</h3>
-                <div className={styles.projectBox2}>
-                    <a href="https://github.com/theodorefink/ANDIE" target="_blank" rel="noopener noreferrer">
-                        <img 
-                            src={andiePic}
-                            alt="Photo of ANDIE" 
-                            className={styles.projectImage} 
-                        />
-                    </a>
-                    <p className={styles.projectDesc}>This is ANDIE - A Non-Destructive Image Editor, built using Java and its Swing and AWT libraries. This was a group project, where we collectively implemented over 40 features.</p>
-                </div>
-            </div>
-            <div className={styles.projectBox}>
-                <h3 className={styles.projectTitle}>Fridge Classifier AI</h3>
-                <div className={styles.projectBox2}>
-                    <p className={styles.projectDesc}>This is an AI fridge-fullness classifier that I trained using PyTorch and ResNet18 as a proof of concept for my team's idea for the NZ AI Hackathon. It was trained on a dataset of 100 images of fridges of varying fullness, which I labelled. It classifies them as either full, half full, or empty with ~75% accuracy.</p>
-                    <a href="https://github.com/Lachyzzz1/KaiConnect/tree/main" target="_blank" rel="noopener noreferrer">
-                        <img 
-                            src={fridgeClassifierPic}
-                            alt="Photo of fridge classifier project" 
-                            className={styles.projectImage} 
-                        />
-                    </a>
-                </div>
-                
-            </div>
-        </section>
-    )
-}
+  return (
+    <section className={styles.projectsSection}>
+      <h2>My Projects</h2>
+      <div className={styles.projectBox}>
+        <h3 className={styles.projectTitle}>Shortlist</h3>
+        <div className={styles.projectBox2}>
+          <p className={styles.projectDesc}>
+            Shortlist is my team's project that was built as part of the
+            SaaSathon, a 48 hour AI/SaaS hackathon held at UC, sponsored by
+            Lumin and Partly. Our product is an AI interviewer that can respond
+            intelligently to a candidate's responses and can reference their CV,
+            acting as a more natural and insightful job screening process than a
+            typical one-way interview. I lead the development of the app,
+            connecting Deepgram, OpenAI Whisper, and Gemini services via their
+            APIs to build it. I used Codex to develop quickly, allowing me to
+            focus on the architecture and commerical viability of the product,
+            learning valuable information about modern development practices
+            from professionals in the tech startup industry.
+          </p>
+          <a
+            href="https://bytesize-sooty.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={shortlistPic}
+              alt="Photo of Shortlist landing page"
+              className={styles.projectImage}
+            />
+          </a>
+        </div>
+      </div>
+      <div className={styles.projectBox}>
+        <h3 className={styles.projectTitle}>Spelling Bee Solver</h3>
+        <div className={styles.projectBox2}>
+          <a
+            href="https://pangram-solver.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={spellingBeePic}
+              alt="Photo of spelling bee project"
+              className={styles.projectImage}
+            />
+          </a>
+          <p className={styles.projectDesc}>
+            This is my Spelling Bee solver web app that I made as a personal
+            project. I love doing the New York Times spelling bee, but sometimes
+            I get a bit stumped so I made this solver app!
+          </p>
+        </div>
+      </div>
+      <div className={styles.projectBox}>
+        <h3 className={styles.projectTitle}>New Zealand Birds website</h3>
+        <div className={styles.projectBox2}>
+          <p className={styles.projectDesc}>
+            This is a website that I made to learn web design. It displays
+            information about New Zealand birds and offers the ability to filter
+            and search.
+          </p>
+          <a
+            href="https://nzbirds.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={nzBirdsPic}
+              alt="Photo of NZ birds project"
+              className={styles.projectImage}
+            />
+          </a>
+        </div>
+      </div>
+      <div className={styles.projectBox}>
+        <h3 className={styles.projectTitle}>ANDIE</h3>
+        <div className={styles.projectBox2}>
+          <a
+            href="https://github.com/theodorefink/ANDIE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={andiePic}
+              alt="Photo of ANDIE"
+              className={styles.projectImage}
+            />
+          </a>
+          <p className={styles.projectDesc}>
+            This is ANDIE - A Non-Destructive Image Editor, built using Java and
+            its Swing and AWT libraries. This was a group project, where we
+            collectively implemented over 40 features.
+          </p>
+        </div>
+      </div>
+      <div className={styles.projectBox}>
+        <h3 className={styles.projectTitle}>Fridge Classifier AI</h3>
+        <div className={styles.projectBox2}>
+          <p className={styles.projectDesc}>
+            This is an AI fridge-fullness classifier that I trained using
+            PyTorch and ResNet18 as a proof of concept for my team's idea for
+            the NZ AI Hackathon. It was trained on a dataset of 100 images of
+            fridges of varying fullness, which I labelled. It classifies them as
+            either full, half full, or empty with ~75% accuracy.
+          </p>
+          <a
+            href="https://github.com/Lachyzzz1/KaiConnect/tree/main"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={fridgeClassifierPic}
+              alt="Photo of fridge classifier project"
+              className={styles.projectImage}
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
